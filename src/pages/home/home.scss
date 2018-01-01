@@ -1,0 +1,53 @@
+page-home {
+    ion-content {
+        overflow: visible !important;
+    }
+    .slides-list {
+        height: 87%;
+        padding: 10px 0px;
+
+        .swiper-slide {
+            width: 100% !important;
+        }
+    }
+
+    .slides-navigation {
+        width: 100%;
+        background: #121212;
+        height: 13%;
+        text-align: center;
+
+        .logo-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: url("../assets/imgs/icon-white.svg") no-repeat center center;
+            background-size: 20px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: inline-block;
+            margin-top: 7px;
+
+            li {
+                float: left;
+                padding: 10px;
+                cursor: pointer;
+                margin: 0px 7px;
+                ion-icon {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+.slide-zoom {
+    height: 100% !important;
+    width: auto !important;
+}

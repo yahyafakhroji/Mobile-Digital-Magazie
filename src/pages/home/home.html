@@ -1,0 +1,39 @@
+<ion-content>
+    <div class="slides-list" id="magazine">
+        <ion-slides zoom="true" (ionSlideDidChange)="onSlideChanged($event)">
+            <ion-slide *ngFor="let img of imageList">
+                <div class="swiper-zoom-container">
+                    <img src="assets/slide/{{img.image}}">
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+
+    <div class="slides-navigation">
+        <ul>
+            <li class="li-icon-res" (click)="generateDub()">
+                <ion-icon name="headset" *ngIf="!dubPlay"></ion-icon>
+                <ion-icon name="pause" *ngIf="dubPlay"></ion-icon>
+            </li>
+            <li class="fcov-slide li-icon" (click)="slideEvent('start')">
+                <ion-icon name="skip-backward"></ion-icon>
+            </li>
+            <li class="prev-slide li-icon" (click)="slideEvent('prev')">
+                <ion-icon name="arrow-back"></ion-icon>
+            </li>
+        </ul>
+        <div class="logo-icon"></div>
+        <ul>
+            <li class="next-slide li-icon" (click)="slideEvent('next')">
+                <ion-icon name="arrow-forward"></ion-icon>
+            </li>
+            <li class="bcov-slide li-icon" (click)="slideEvent('end')">
+                <ion-icon name="skip-forward"></ion-icon>
+            </li>
+            <li class="slideshow li-icon" (click)="slideAutoPlay()">
+                <ion-icon name="play" *ngIf="!autoPlay"></ion-icon>
+                <ion-icon name="pause" *ngIf="autoPlay"></ion-icon>
+            </li>
+        </ul>
+    </div>
+</ion-content>
